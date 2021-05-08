@@ -1,0 +1,14 @@
+.boxCard{
+  width: 400px;
+  height: 350px;
+  padding: 50px;
+  margin-top: 80px;
+}
+@media only screen and (max-width: 600px) {
+  .boxCard {
+    width: 200px;
+    margin: auto;
+    height: 260px;
+    margin-top: 20px;
+  }
+}

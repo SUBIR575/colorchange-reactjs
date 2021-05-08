@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Card from './Card'
+import './App.css'
 
-function App() {
+const App = () => {
+  const [state, setstate] = useState('#ff4d4d')
+  const [newText,setNewText] = useState();
+  const clickEvent=()=>{
+    setstate("#4dff4d");
+    setNewText('Button Clicked');
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='container'>
+    <div>
+    <Card bgcolor={state}/>
+    <br/>
+    <div style={{textAlign:'center'}}>
+    <button className='btn' onClick={clickEvent}>Press</button>
+    <br/>
+    <h4>{newText}</h4>
     </div>
-  );
+    </div>
+    </div>
+    </>
+  )
 }
 
-export default App;
+export default App
